@@ -3,18 +3,15 @@ package com.test.baselibrary.adapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.CallSuper;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.test.baselibrary.base.BaseCallBack;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import widget.cf.com.widgetlibrary.R;
-import widget.cf.com.widgetlibrary.base.BaseCallBack;
-import widget.cf.com.widgetlibrary.util.ApplicationUtil;
 
 public abstract class BaseCommonAdapter<T> extends RecyclerView.Adapter<BaseViewHolder> {
 
@@ -136,14 +133,6 @@ public abstract class BaseCommonAdapter<T> extends RecyclerView.Adapter<BaseView
                 mRecyclerView.post(() -> notifyDataSetChangedSafe());
             }
         }
-    }
-
-    public int getMessageTextWidth(View itemView, int viewId) {
-        int width = View.MeasureSpec.makeMeasureSpec(mRecyclerView.getWidth(), View.MeasureSpec.EXACTLY);
-        int height = View.MeasureSpec.makeMeasureSpec(ApplicationUtil.getIntDimension(R.dimen.dp_1), View.MeasureSpec.EXACTLY);
-        itemView.measure(width, height);
-        TextView messageTv = itemView.findViewById(viewId);
-        return messageTv.getMeasuredWidth() - messageTv.getCompoundPaddingLeft() - messageTv.getCompoundPaddingRight();
     }
 
     public void onItemClick(int position, View v, T item) {
