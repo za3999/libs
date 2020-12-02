@@ -162,5 +162,6 @@ implementation 'com.cf.lib:baselibrary:1.0.0'
 之后的页面中填写项目信息，交给Bintray管理员审核：
 ![](https://upload-images.jianshu.io/upload_images/4443425-7015aeb95c69ca8f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 审核通过之后，就不需要配置Maven URL了。
-####6. 多module和注解参考 
+
+**6. 多module和注解参考**
  https://blog.csdn.net/lmj623565791/article/details/51148825
